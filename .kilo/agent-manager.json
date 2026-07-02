@@ -1,0 +1,21 @@
+{
+  "worktrees": {},
+  "sessions": {},
+  "sections": {
+    "sec-1779818730803-3": {
+      "name": "New Section",
+      "color": "Red",
+      "order": 0,
+      "collapsed": true
+    }
+  },
+  "tabOrder": {
+    "local": [
+      "pending:1"
+    ]
+  },
+  "worktreeOrder": [
+    "sec-1779818730803-3"
+  ],
+  "sessionsCollapsed": true
+}
