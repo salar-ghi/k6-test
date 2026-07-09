@@ -23,7 +23,7 @@ export function addManagement(token) {
     let res;
     const ormId = "29D2FBC4-B397-42FA-8242-E99DBA1D60E3";
 
-    // Full ExecAction payload (from your browser capture)
+    // Full ExecAction payload (from your browser capture
     const execPayload = {
         "refreshRules": [
             { "refreshkey": "RefreshProp_24_PARENT_RID", "xpath": "" },
