@@ -1,17 +1,13 @@
 import http from "k6/http";
 import { check } from "k6";
-import { ENV } from "../config/env.js";
+import { ENV } from "../../config/env.js";
 
-export function loadCartable(token) {
+export function loadManagementSelect(token) {   // Better function name
     const paramsWithAuth = {
         headers: { 
             Authorization: `Bearer ${token}` 
         },
-        tags: { workflow: "LoadCartable" }
-    };
-
-    const paramsNoAuth = {
-        tags: { workflow: "LoadCartable", type: "asset" }
+        tags: { workflow: "LoadManagementSelect" }
     };
 
     let res;
@@ -31,21 +27,20 @@ export function loadCartable(token) {
         paramsWithAuth
     );
     check(res, { 
-        "cartable grid": (r) => r.status === 200,
-        "cartable grid not 401/403": (r) => r.status !== 401 && r.status !== 403,
-        "grid returns data": (r) => r.status === 200   // Simplified for now
+        "management select grid": (r) => r.status === 200,
+        "management select grid not 401/403": (r) => r.status !== 401 && r.status !== 403,
     });
 
-    // 3. JS Asset (NO Authorization header)
+    // 3. JS Asset - FIXED
     res = http.get(
-    `"${ENV.baseUrl}assets/TF_931DB9CA_AD20_435E_87C5_DEA1F78D296E-8c195cc2.js`,
-        paramsNoAuth
+        "http://192.168.10.178:1379/assets/TF_931DB9CA_AD20_435E_87C5_DEA1F78D296E-8c195cc2.js",
+        { tags: { workflow: "LoadManagementSelect", type: "asset" } }
     );
     check(res, { 
         "js asset loaded": (r) => r.status === 200 || r.status === 304 
     });
 
-    console.log(`Cartable Flow - Form: ${res.status === 200 ? 'OK' : 'FAIL'}, Grid Status: ${res.status}`);
+    console.log(`Management Select Flow completed - Grid Status: ${res.status}`);
 
     return res;
 }

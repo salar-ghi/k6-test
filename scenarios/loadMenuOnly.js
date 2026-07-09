@@ -5,6 +5,12 @@ import { htmlReport } from "../lib/k6-reporter.js";
 const users = [{ username: "5300044611", password: "1" }];
 // export { options };
 
+export const options = {
+  vus: 2,
+  iterations: 2,
+//   duration: '1m',
+};
+
 export default function () {
     const token = login(users[0]);
     if (token) loadMenu(token);

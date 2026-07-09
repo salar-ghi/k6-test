@@ -1,0 +1,289 @@
+{
+  "options": {
+    "summaryTrendStats": [
+      "avg",
+      "min",
+      "med",
+      "max",
+      "p(90)",
+      "p(95)"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": false
+  },
+  "state": {
+    "isStdErrTTY": true,
+    "testRunDurationMs": 11284.6768,
+    "isStdOutTTY": true
+  },
+  "metrics": {
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 1
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 22,
+        "rate": 1.949546308672305
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "contains": "time",
+      "values": {
+        "avg": 108.55211578947369,
+        "min": 4.4549,
+        "med": 101.7103,
+        "max": 347.0251,
+        "p(90)": 187.76098,
+        "p(95)": 215.23323999999968
+      },
+      "type": "trend"
+    },
+    "http_req_sending": {
+      "values": {
+        "avg": 0.0021227272727272727,
+        "min": 0,
+        "med": 0,
+        "max": 0.0467,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_waiting": {
+      "values": {
+        "avg": 102.13211818181817,
+        "min": 3.5143,
+        "med": 89.0564,
+        "max": 346.3499,
+        "p(90)": 183.79728,
+        "p(95)": 199.52447499999997
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_connecting": {
+      "contains": "time",
+      "values": {
+        "avg": 0.1832590909090909,
+        "min": 0,
+        "med": 0,
+        "max": 2.0288,
+        "p(90)": 0,
+        "p(95)": 1.9027549999999984
+      },
+      "type": "trend"
+    },
+    "http_req_tls_handshaking": {
+      "contains": "time",
+      "values": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "type": "trend"
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.3930090909090909,
+        "min": 0,
+        "med": 0.40505,
+        "max": 0.9406,
+        "p(90)": 0.7440500000000002,
+        "p(95)": 0.838055
+      }
+    },
+    "checks": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.8285714285714286,
+        "passes": 29,
+        "fails": 6
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 4077.9936,
+        "p(90)": 4019.09482,
+        "p(95)": 4048.54421,
+        "avg": 3761.5178333333333,
+        "min": 3423.0602,
+        "med": 3783.4997
+      }
+    },
+    "http_req_failed": {
+      "contains": "default",
+      "values": {
+        "rate": 0.13636363636363635,
+        "passes": 3,
+        "fails": 19
+      },
+      "type": "rate"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(90)": 0,
+        "p(95)": 1.9273599999999984,
+        "avg": 0.7989409090909091,
+        "min": 0,
+        "med": 0,
+        "max": 15.5479
+      }
+    },
+    "vus": {
+      "contains": "default",
+      "values": {
+        "value": 1,
+        "min": 1,
+        "max": 1
+      },
+      "type": "gauge"
+    },
+    "data_received": {
+      "contains": "data",
+      "values": {
+        "count": 85654,
+        "rate": 7590.29270559171
+      },
+      "type": "counter"
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 102.52725000000001,
+        "min": 4.4549,
+        "med": 89.40515,
+        "max": 347.0251,
+        "p(90)": 184.3175,
+        "p(95)": 199.787905
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 33616,
+        "rate": 2978.9067596512823
+      }
+    },
+    "iterations": {
+      "contains": "default",
+      "values": {
+        "count": 3,
+        "rate": 0.26584722390985976
+      },
+      "type": "counter"
+    }
+  },
+  "root_group": {
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": [],
+    "checks": [
+        {
+          "name": "login successful",
+          "path": "::login successful",
+          "id": "72410831cb1258cbc9a2391f92e33c94",
+          "passes": 1,
+          "fails": 0
+        },
+        {
+          "passes": 1,
+          "fails": 0,
+          "name": "token present",
+          "path": "::token present",
+          "id": "643d7aaa45ec3e28108f48c887745d01"
+        },
+        {
+          "name": "menu loaded successfully",
+          "path": "::menu loaded successfully",
+          "id": "87913936f8f6c8fbc1b6c614486c9d21",
+          "passes": 3,
+          "fails": 0
+        },
+        {
+          "fails": 0,
+          "name": "form config",
+          "path": "::form config",
+          "id": "5ab09240a97a4ac3fda0c813e29d85e5",
+          "passes": 3
+        },
+        {
+          "name": "cartable grid",
+          "path": "::cartable grid",
+          "id": "76a79987c5519bd95a81015d6cba969b",
+          "passes": 3,
+          "fails": 0
+        },
+        {
+          "id": "4cef7e8cc6d41ff4a7dded5d70da7083",
+          "passes": 3,
+          "fails": 0,
+          "name": "cartable grid not 401/403",
+          "path": "::cartable grid not 401/403"
+        },
+        {
+          "passes": 3,
+          "fails": 0,
+          "name": "grid returns data",
+          "path": "::grid returns data",
+          "id": "015658f1a709a321a4e6ab616a910b8f"
+        },
+        {
+          "id": "8b3d1259a008e97b65e38440b28d9ba8",
+          "passes": 3,
+          "fails": 3,
+          "name": "js asset loaded",
+          "path": "::js asset loaded"
+        },
+        {
+          "path": "::select grid",
+          "id": "bf9be5ba3b1ede988a06783217660efb",
+          "passes": 0,
+          "fails": 3,
+          "name": "select grid"
+        },
+        {
+          "name": "select grid not 401/403",
+          "path": "::select grid not 401/403",
+          "id": "4cef8aae72579fb70a44fbc8968f8c2f",
+          "passes": 3,
+          "fails": 0
+        },
+        {
+          "path": "::form visited",
+          "id": "eb2f1b1bc263f43acf8e82387160730a",
+          "passes": 3,
+          "fails": 0,
+          "name": "form visited"
+        },
+        {
+          "name": "form config select",
+          "path": "::form config select",
+          "id": "b2b330fbf65dbd3d5d926465e6996942",
+          "passes": 3,
+          "fails": 0
+        }
+      ]
+  }
+}
